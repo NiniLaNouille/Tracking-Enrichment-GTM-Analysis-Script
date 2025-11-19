@@ -33,7 +33,7 @@ The goal is to automate the detection of GTM inconsistencies before publishing u
 ## Requirements
 Before running the script, ensure you have:
 -   Python 3.9+
--   GTM access\
+-   GTM access
 -   Tag Manager API enabled
 -   The following packages (installed automatically in the notebook):
   -   google-auth
@@ -56,16 +56,16 @@ The notebook will install missing dependencies at runtime.
 ##  Generating the OAuth Token
 To access GTM programmatically, the script uses InstalledAppFlow, which requires a Google OAuth client configuration.
 
-1.  Create a Google Cloud project\
+1.  Create a Google Cloud project
   Go to: https://console.cloud.google.com/
   Select an existing project or create a new one.
 
-2.  Enable Tag Manager API\
+2.  Enable Tag Manager API
   Make sure the Tag Manager API is enabled
   APIs & Services → Enabled APIs & Services → Enable API
   Search for Tag Manager API and enable it.
 
-3.  Create OAuth Desktop App credentials\
+3.  Create OAuth Desktop App credentials
   Go to APIs & Services → Credentials → Create Credentials → OAuth client ID
   Choose: Application type: Desktop app
   Download the generated file — usually named: client_secret_<random>.json
@@ -102,24 +102,24 @@ https://tagmanager.google.com/#/container/accounts/<ACCOUNT>/containers/<CONTAIN
 
 ## Running the Analysis
 
-1.  Install dependencies\
-2.  Authenticate\
-3.  Fetch GTM data\
-4.  Compare workspace vs live\
+1.  Install dependencies
+2.  Authenticate
+3.  Fetch GTM data
+4.  Compare both structures
 5.  Inspect results
    
 
 ## Output
 
--   JSON comparison\
--   Diff of tags, triggers, variables\
+-   JSON comparison
+-   Diff of tags, triggers, variables
 -   Missing or inconsistent items
 
 
 ## Troubleshooting
 
--   Ensure OAuth credentials are correct\
--   Ensure your Google account has GTM edit rights\
+-   Ensure OAuth credentials are correct
+-   Ensure your Google account has GTM edit rights
 -   Delete `token.json` to re-authenticate
 
 
