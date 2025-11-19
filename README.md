@@ -72,6 +72,34 @@ To access GTM programmatically, the script uses InstalledAppFlow, which requires
   Save it in the same directory as the notebook, and rename it to: client_secrets.json
 
 
+## Authenticate for the First Time
+
+The first time you run:
+
+flow = InstalledAppFlow.from_client_secrets_file(
+    'client_secrets.json',
+    scopes=['https://www.googleapis.com/auth/tagmanager.edit.containers']
+)
+credentials = flow.run_local_server(port=0)
+
+A browser window opens—log in and confirm access.
+A file named token.json will be created.
+Next runs reuse this token automatically.
+
+
+## Configuration
+
+Edit the variables in the notebook:
+
+GTM_ACCOUNT_ID = "123456789"
+GTM_CONTAINER_ID = "abc123"
+WORKSPACE_ID = "1"
+
+You can retrieve these from the GTM interface URL:
+
+https://tagmanager.google.com/#/container/accounts/<ACCOUNT>/containers/<CONTAINER>/workspaces/<WORKSPACE>
+
+
 ## Running the Analysis
 
 1.  Install dependencies\
