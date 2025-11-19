@@ -51,7 +51,23 @@ The notebook will install missing dependencies at runtime.
     cd <your-repo>
     jupyter notebook tracking_enrich_GTM.ipynb
 
+If you need to launch Python locally (ie. on Windows environment) you can do it so by opening an Explorer where you have your main directory, and in the path bar just type "powershell".
+Then in the shell:
+- Set-ExecutionPolicy -Scope Process RemoteSigned
+- .\.venv\Scripts\Activate.ps1
+- python -m notebook
 
+You should see something like:
+
+To access the server, open this file in a browser: file:/C:/Users/.../Roaming/jupyter/runtime/jpserver-30536-open.html
+
+Or copy and paste one of these URLs: http://localhost:8888/tree?token=3b47f55d9a2d26a6faf03b389187c7149c2ed8b255777d36
+or http://127.0.0.1:8888/tree?token=3b47f55d9a2d26a6faf03b389187c7149c2ed8b255777d36
+
+
+So basically you can open your localhost: http://localhost:8888/tree
+and there you should see your local python environment running.
+Then it's up to you, either you copy/paste on your local directory the tracking_enrich_GTM.ipynb, or you create a new notbook and name it as you wish.
 
 ##  Generating the OAuth Token
 To access GTM programmatically, the script uses InstalledAppFlow, which requires a Google OAuth client configuration.
