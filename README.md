@@ -90,13 +90,11 @@ Next runs reuse this token automatically.
 ## Configuration
 
 Edit the variables in the notebook:
-
-GTM_ACCOUNT_ID = "123456789"
-GTM_CONTAINER_ID = "abc123"
-WORKSPACE_ID = "1"
+- GTM_ACCOUNT_ID = "123456789"
+- GTM_CONTAINER_ID = "abc123"
+- WORKSPACE_ID = "1"
 
 You can retrieve these from the GTM interface URL:
-
 https://tagmanager.google.com/#/container/accounts/<ACCOUNT>/containers/<CONTAINER>/workspaces/<WORKSPACE>
 
 
